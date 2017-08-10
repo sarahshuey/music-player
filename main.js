@@ -29,10 +29,12 @@ fetch(`${url}${music}`)
         console.log('all results', allResults);
           data.results.forEach(function(a) {
               allResults += `<div class ='eachResult'>
-              <div class ='name'>${a.artistName}</div>
-              <div class ='albumName'>${a.collectionName}</div>
-              <div class ='songName'>${a.trackName}</div>
-              <div class ='albumCover'><img src='${a.artworkUrl100}'></div>
+              <div class ='albumCover'><a href="${a.previewUrl}"><img src='${a.artworkUrl100}'></a></div>
+              <div class ='info'>
+              <div class ='songName'> ${a.trackName}</div>
+              <div class ='albumName'> ${a.collectionName}</div>
+              <div class ='name'> ${a.artistName}</div>
+              </div>
               </div>`
               results.innerHTML = allResults
             })

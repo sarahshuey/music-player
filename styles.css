@@ -1,10 +1,14 @@
 body {
-  background-color: #6a6b68;
+  background-color: #f2f4f7;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-family: 'Permanent Marker', cursive;
+}
+header h1{
+  color:#738196:
 }
 .search-form{
   display: flex;
@@ -12,7 +16,7 @@ body {
 }
 .search-input{
   display: flex;
-  flex-basis: 85%;
+  widows: 80px;
   margin-right: 10px;
 }
 .search-button{
@@ -29,15 +33,59 @@ textarea:focus, input:focus{
 
 .results{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction:column ;
   padding-top: 20px;
 }
 .eachResult{
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  text-align: center;
-  padding: 10px;
-flex-basis: 40%;
+  flex-direction: row;
+  border: solid 1px #a0aaba;
 }
+.eachResult:hover{
+  background-color: #d4e2f9;
+  opacity: .2;
+}
+
+}
+.albumCover{
+  display: flex;
+  flex-direction:column;
+  text-align: center;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-content: center;
+  justify-content: center;
+  font-family: 'Hammersmith One', sans-serif;
+  margin-left: 50px;
+}
+.name{
+  color:#a0aaba;
+}
+.albumName{
+  color: #8a98ad;
+  font-weight: bolder;
+}
+.songName{
+  color:#8a98ad;
+  font-size: 20px;
+}
+/*@media only screen and (min-width: 700px) {
+      body {
+          max-width: 100%;
+      }
+      .eachResult{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 50%;
+        padding-right: 50px;
+      }
+  }
+@media only screen and (min-width: 965px) {
+      body {
+          max-width: 100%;
+
+  }*/
