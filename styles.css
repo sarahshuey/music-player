@@ -13,20 +13,28 @@ header h1{
 .container{
   max-width: 650px;
 }
+
 .search-form{
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  border: none;
 }
 .search-input{
   display: flex;
   widows: 80px;
   margin-right: 10px;
   background-color: #f2f4f7;
+  font-family: 'Permanent Marker', cursive;
 }
 .search-button{
   border: none;
   border-radius: 20px;
-  background-color: white;
+  background-color: #a0aaba;
+  color:#738196;
+  font-family: 'Permanent Marker', cursive;
 }
 button:focus {
   outline:0;
@@ -55,6 +63,9 @@ textarea:focus, input:focus{
   display: flex;
   flex-direction:column;
   text-align: center;
+}
+.albumCover img{
+  min-width: 100px;
 }
 .info {
   display: flex;
