@@ -1,7 +1,6 @@
 let button = document.querySelector('.search-button')
       button.addEventListener('click', function () {
         let input = document.querySelector('.search-input');
-        console.log('value = ', input.value);
         let music = input.value
         let player = document.querySelector('.music-player')
 let results = document.querySelector('.results')
@@ -16,13 +15,11 @@ fetch(`${url}${music}`)
         return;
       }
       response.json().then(function(data) {
-        console.log('data', data);
-        let allResults =''
-        console.log('all results', allResults);
+        results.innerHTML =''
           data.results.forEach(function(a) {
             let bigdiv = document.createElement('div')
             bigdiv.classList.add('eachResult')
-              allResults = `
+              let allResults = `
               <div class ='albumCover'><img src='${a.artworkUrl100}'></div>
               <div class ='info'>
               <div class ='songName'> ${a.trackName}</div>
@@ -32,8 +29,6 @@ fetch(`${url}${music}`)
               bigdiv.innerHTML = allResults
               results.appendChild(bigdiv)
               bigdiv.addEventListener('click', function() {
-                console.log('click');
-                console.log(a.previewUrl);
                 player.src = a.previewUrl
               })
             })
