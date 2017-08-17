@@ -88,7 +88,7 @@ textarea:focus, input:focus{
   color:#8a98ad;
   font-size: 20px;
 }
-@media only screen and (min-width: 700px) {
+@media screen and (min-width: 700px) {
       .container {
           max-width: 900px;
       }
@@ -104,7 +104,7 @@ textarea:focus, input:focus{
         justify-content: center;
       }
   }
-@media only screen and (min-width: 965px) {
+@media screen and (min-width: 965px) {
       .container{
           max-width: 1100px;
         }
