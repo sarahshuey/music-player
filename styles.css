@@ -10,10 +10,6 @@ body {
 header h1{
   color:#738196;
 }
-@media screen and(min-width: 400px){
-.container{
-  max-width: 650px;
-}
 
 .search-form{
   display: flex;
@@ -25,7 +21,7 @@ header h1{
 }
 .search-input{
   display: flex;
-  widows: 80px;
+  width: 180px;
   margin-right: 10px;
   background-color: #f2f4f7;
   font-family: 'Permanent Marker', cursive;
@@ -42,23 +38,6 @@ button:focus {
 }
 textarea:focus, input:focus{
     outline: none;
-}
-
-.results{
-  display: flex;
-  flex-direction:column ;
-  padding-top: 20px;
-}
-.eachResult{
-  display: flex;
-  flex-direction: row;
-  border: solid 1px #a0aaba;
-}
-.eachResult:hover{
-  background-color: #d4e2f9;
-  opacity: .2;
-}
-
 }
 .albumCover{
   display: flex;
@@ -88,7 +67,30 @@ textarea:focus, input:focus{
   color:#8a98ad;
   font-size: 20px;
 }
-@media screen and (min-width: 700px) {
+.eachResult{
+  display: flex;
+  flex-direction: row;
+  border: solid 1px #a0aaba;
+}
+.eachResult:hover{
+  background-color: #d4e2f9;
+  opacity: .2;
+}
+
+/*.results {
+  background: green;
+}*/
+
+@media screen and (min-width: 500px) {
+  .results{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    /*background: blue;*/
+  }
+}
+
+/*@media screen and(min-width: 780px) {
       .container {
           max-width: 900px;
       }
@@ -103,14 +105,27 @@ textarea:focus, input:focus{
         flex-wrap: wrap;
         justify-content: center;
       }
-  }
-@media screen and (min-width: 965px) {
+  }*/
+/*@media screen and (min-width: 965px) {
       .container{
           max-width: 1100px;
         }
+        .results{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
         .eachResult{
           display: flex;
           flex-basis: 30%;
         }
 
-  }
+  }*/
+
+  /*@media screen and (min-width: 800px){
+    .results {
+      background: red;
+    }
+  }*/
