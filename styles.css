@@ -10,7 +10,7 @@ body {
 header h1{
   color:#738196;
 }
-@media handheld and(min-width: 400px){}
+@media screen and(min-width: 400px){
 .container{
   max-width: 650px;
 }
