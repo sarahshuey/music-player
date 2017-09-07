@@ -81,14 +81,13 @@ textarea:focus, input:focus{
   background: green;
 }*/
 
-@media screen and (min-width: 500px) {
   .results{
     display: flex;
     flex-direction: column;
     padding-top: 20px;
     /*background: blue;*/
   }
-}
+
 
 /*@media screen and(min-width: 780px) {
       .container {
