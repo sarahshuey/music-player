@@ -1,12 +1,20 @@
+// this is getting elements from the HTML page so we can use them in ar JS
+
 let button = document.querySelector('.search-button')
       button.addEventListener('click', function () {
         let input = document.querySelector('.search-input');
         let music = input.value
         let player = document.querySelector('.music-player')
 let results = document.querySelector('.results')
+
+//apples api link
+
 let url ='https://itunes.apple.com/search?term='
 
+//here we are calling apples api with the search value
+
 fetch(`${url}${music}`)
+
 .then(
     function(response) {
       if (response.status !== 200) {
@@ -14,9 +22,13 @@ fetch(`${url}${music}`)
           response.status);
         return;
       }
+
       response.json().then(function(data) {
         results.innerHTML =''
           data.results.forEach(function(a) {
+
+            // here we are creating a new div for each result we populate in the search
+
             let bigdiv = document.createElement('div')
             bigdiv.classList.add('eachResult')
               let allResults = `
